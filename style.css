@@ -70,16 +70,17 @@ header {
   background: #c2185b;
 }
 
-/* RESPONSIVO - ATUALIZADO */
+/* RESPONSIVO - CORREÇÃO DE DIREÇÃO */
 @media (max-width: 768px) {
 
-  /* No mobile, ajustamos o ponto focal para a direita,
-     puxando o conteúdo da esquerda (texto cortado) para fora */
+  /* No mobile, ajustamos o ponto focal para a esquerda,
+     puxando o conteúdo (o texto) para dentro e empurrando
+     a Mari para fora */
   .hero-img {
     /* object-position: horizontal vertical; */
-    /* 🔥 AJUSTE AQUI: Mudamos de 'center' (50%) para '65%'.
-       Quanto maior este valor, mais para a esquerda a imagem 'puxa'. */
-    object-position: 65% center;
+    /* 🔥 AJUSTE AQUI: Mudamos de 'center' (50%) para '35%'.
+       Quanto menor este valor, mais para a esquerda a imagem foca. */
+    object-position: 35% center;
   }
 
   .overlay {
@@ -95,4 +96,4 @@ header {
     padding: 8px 14px;
     font-size: 12px;
   }
-}
+  }
