@@ -92,8 +92,7 @@ header {
   }
 }
 
-/* 🔽 ADIÇÃO (SEM ALTERAR NADA ACIMA) */
-
+/* ADIÇÃO */
 .form-agendamento {
   display: none;
   flex-direction: column;
@@ -130,4 +129,4 @@ header {
 
 .form-agendamento.active {
   display: flex;
-  }
+}
