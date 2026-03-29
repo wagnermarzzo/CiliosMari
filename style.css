@@ -80,7 +80,7 @@ header {
     /* object-position: horizontal vertical; */
     /* 🔥 AJUSTE AQUI: Mudamos de 'center' (50%) para '35%'.
        Quanto menor este valor, mais para a esquerda a imagem foca. */
-    object-position: 25% center;
+    object-position: 20% center;
   }
 
   .overlay {
