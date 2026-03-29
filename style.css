@@ -70,12 +70,16 @@ header {
   background: #c2185b;
 }
 
-/* RESPONSIVO */
+/* RESPONSIVO - ATUALIZADO */
 @media (max-width: 768px) {
 
-  /* No mobile, Centralizamos para o botão e o espaço vazio ficarem visíveis */
+  /* No mobile, ajustamos o ponto focal para a direita,
+     puxando o conteúdo da esquerda (texto cortado) para fora */
   .hero-img {
-    object-position: center; /* 🔥 NO MOBILE, O CENTRO VAI PREVALECER */
+    /* object-position: horizontal vertical; */
+    /* 🔥 AJUSTE AQUI: Mudamos de 'center' (50%) para '65%'.
+       Quanto maior este valor, mais para a esquerda a imagem 'puxa'. */
+    object-position: 65% center;
   }
 
   .overlay {
@@ -91,4 +95,4 @@ header {
     padding: 8px 14px;
     font-size: 12px;
   }
-  }
+}
