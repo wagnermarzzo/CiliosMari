@@ -16,16 +16,16 @@
   <!-- CAPA -->
   <section class="hero">
 
-    <!-- IMAGEM (NÃO CORTA) -->
+    <!-- IMAGEM -->
     <img src="img/1774799502178.png" class="hero-img">
 
-    <!-- BOTÃO CENTRAL -->
+    <!-- BOTÃO + FORM -->
     <div class="overlay">
 
-      <!-- BOTÃO ORIGINAL (ABRE FORM) -->
+      <!-- BOTÃO PRINCIPAL -->
       <button class="btn-agendar" id="abrirForm">Agendamento</button>
 
-      <!-- FORM (ADICIONADO) -->
+      <!-- FORM -->
       <form id="form-agendamento" class="form-agendamento">
 
         <input type="text" id="nome" placeholder="Nome e sobrenome" required>
@@ -38,8 +38,8 @@
         <input type="date" id="data" required>
         <input type="time" id="hora" required>
 
-        <!-- BOTÃO DE ENVIO -->
-        <button type="submit" class="btn-agendar">Confirmar Agendamento</button>
+        <!-- BOTÃO FINAL (SÓ APARECE NO FORM) -->
+        <button type="submit" class="btn-agendar">Agendar</button>
 
       </form>
 
@@ -47,13 +47,19 @@
 
   </section>
 
-  <!-- SCRIPT -->
   <script>
     const abrirBtn = document.getElementById('abrirForm');
     const form = document.getElementById('form-agendamento');
 
     abrirBtn.addEventListener('click', () => {
       form.classList.toggle('active');
+
+      // ESCONDE o botão principal quando abrir
+      if (form.classList.contains('active')) {
+        abrirBtn.style.display = 'none';
+      } else {
+        abrirBtn.style.display = 'block';
+      }
     });
 
     form.addEventListener('submit', function(e) {
