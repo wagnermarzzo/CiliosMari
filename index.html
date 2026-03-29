@@ -22,9 +22,62 @@
     <!-- BOTÃO CENTRAL -->
     <div class="overlay">
       <button class="btn-agendar">Agendamento</button>
+
+      <!-- 🔽 FORM ADICIONADO (SEM MEXER NO RESTO) -->
+      <form id="form-agendamento" class="form-agendamento">
+
+        <input type="text" id="nome" placeholder="Nome e sobrenome" required>
+
+        <div class="whatsapp-box">
+          <span>+55</span>
+          <input type="tel" id="whatsapp" placeholder="DDD + número" required>
+        </div>
+
+        <input type="date" id="data" required>
+        <input type="time" id="hora" required>
+
+        <button type="submit" class="btn-agendar">Agendar</button>
+
+      </form>
+
     </div>
 
   </section>
 
+  <!-- 🔽 SCRIPT ADICIONADO -->
+  <script>
+    const botao = document.querySelector('.btn-agendar');
+    const form = document.getElementById('form-agendamento');
+
+    botao.addEventListener('click', () => {
+      form.classList.toggle('active');
+    });
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nome = document.getElementById('nome').value;
+      const whatsapp = document.getElementById('whatsapp').value;
+      const data = document.getElementById('data').value;
+      const hora = document.getElementById('hora').value;
+
+      const numero = "5511916181914";
+
+      const mensagem = 
+`✨ *Novo Agendamento - Cílios* ✨
+
+👤 Nome: ${nome}
+📱 WhatsApp: +55 ${whatsapp}
+📅 Data: ${data}
+⏰ Horário: ${hora}
+
+💖 Aguardando confirmação!`;
+
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+      window.open(url, '_blank');
+    });
+  </script>
+
 </body>
-</html>
+  </html>
