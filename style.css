@@ -29,15 +29,14 @@ header {
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  /* background-color: #f5d6d6; - Não precisa mais da cor de fundo se a imagem cobre tudo */
 }
 
 /* IMAGEM SEM CORTE - ATUALIZADO */
 .hero-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 🔥 AGORA COBRE TUDO E CENTRALIZA */
-  object-position: center; /* 🔥 Garante que a Mari e o texto fiquem visíveis no celular */
+  object-fit: cover; /* COBRE TUDO E CENTRALIZA */
+  object-position: center; /* CENTRALIZA O ESPAÇO VAZIO E O BOTÃO */
 }
 
 /* CAMADA DOS BOTÕES */
@@ -74,9 +73,9 @@ header {
 /* RESPONSIVO */
 @media (max-width: 768px) {
 
-  /* No mobile, Centralizamos para a Mari e o display ficarem visíveis */
+  /* No mobile, Centralizamos para o botão e o espaço vazio ficarem visíveis */
   .hero-img {
-    object-position: 70% center; /* 🔥 Ajuste fino para celular, centralizando o rosto da Mari */
+    object-position: center; /* 🔥 NO MOBILE, O CENTRO VAI PREVALECER */
   }
 
   .overlay {
@@ -92,5 +91,4 @@ header {
     padding: 8px 14px;
     font-size: 12px;
   }
-  }
-      
+}
